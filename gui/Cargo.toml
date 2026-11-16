@@ -1,0 +1,13 @@
+[package]
+name = "fortress-gui"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "Experimental no_std software desktop compositor; no hardware backend"
+
+[lib]
+path = "src/lib.rs"
+
+[features]
+default = []
+std = []

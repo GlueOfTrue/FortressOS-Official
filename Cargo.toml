@@ -1,0 +1,31 @@
+[workspace]
+resolver = "2"
+members = [
+    "tools/xtask",
+    "experiments/uefi-g0-diagnostic",
+    "arch",
+    "memory",
+    "process",
+    "scheduler",
+    "cap",
+    "gpu",
+    "gui",
+]
+# BOOT keeps its own linker profile and target, including in pinned CI checkouts.
+exclude = ["kernel", "boot-source/kernel", "arch/x86-entry", "memory-x86"]
+default-members = ["tools/xtask"]
+
+[profile.dev]
+opt-level = 0
+debug = 2
+panic = "abort"
+incremental = false
+
+[profile.release]
+opt-level = 2
+debug = 1
+lto = "thin"
+codegen-units = 1
+panic = "abort"
+incremental = false
+strip = "none"

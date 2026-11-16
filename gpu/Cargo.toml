@@ -1,0 +1,16 @@
+[package]
+name = "fortress-gpu"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "Experimental no_std PCI/GPU resource host model; no MMIO backend"
+
+[lib]
+path = "src/lib.rs"
+
+[features]
+default = []
+
+[dev-dependencies]
+fortress-arch-irq = { path = "../arch" }
+fortress-memory-model = { path = "../memory" }

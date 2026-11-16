@@ -1,0 +1,14 @@
+[package]
+name = "fortress-arch-irq"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "Pure no_std x86-64 IRQ ownership state model; no privileged hardware access"
+
+[lib]
+path = "src/lib.rs"
+
+[features]
+default = []
+
+[dependencies]

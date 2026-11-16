@@ -1,0 +1,58 @@
+[package]
+name = "fortress-boot-kernel"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+name = "fortress_boot_kernel"
+path = "src/lib.rs"
+
+[[bin]]
+name = "fortress-kernel"
+path = "src/main.rs"
+test = false
+bench = false
+
+[profile.release]
+panic = "abort"
+lto = true
+codegen-units = 1
+opt-level = "s"
+
+[profile.dev]
+panic = "abort"
+
+[features]
+# Never enable for real hardware. QEMU-only isa-debug-exit at I/O port 0xf4.
+g1-qemu-exit = []
+g1-fixture-map-zero = []
+g1-fixture-map-overflow = []
+g1-fixture-map-overlap = []
+g1-fixture-fb-invalid = []
+g1-fixture-fb-alias = []
+g1-fixture-kernel-overflow = []
+g1-fixture-no-fb = []
+g1-fixture-late-panic = []
+g1-fixture-hang = []
+g1-fixture-cpu-ud = []
+g1-fixture-cpu-gp = []
+g1-fixture-console = []
+g1-fixture-k2-ud = ["dep:fortress-arch-x86-entry"]
+g1-fixture-k1-real = ["dep:fortress-arch-x86-entry","dep:fortress-memory-model","dep:fortress-memory-x86"]
+
+g1-fixture-k3 = ["k3-fixture-runtime"]
+k3-fixture-runtime = [
+    "dep:fortress-arch-x86-entry", "dep:fortress-memory-model", "dep:fortress-memory-x86",
+    "dep:fortress-process", "dep:fortress-cap-ipc", "dep:fortressos-scheduler",
+]
+
+g1-fixture-k4 = ["k3-fixture-runtime"]
+
+[dependencies]
+fortress-process = { path = "../process", optional = true }
+fortress-cap-ipc = { path = "../cap", optional = true }
+fortressos-scheduler = { path = "../scheduler", optional = true }
+fortress-arch-x86-entry = { path = "../arch/x86-entry", optional = true }
+fortress-memory-model = { path = "../memory", optional = true }
+fortress-memory-x86 = { path = "../memory-x86", optional = true }

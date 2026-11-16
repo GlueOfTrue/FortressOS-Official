@@ -1,0 +1,16 @@
+[package]
+name = "fortress-diag"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[[bin]]
+name = "fortress-diag"
+path = "src/main.rs"
+test = false
+bench = false
+
+[features]
+fault-probe = []
+
+[dependencies]

@@ -1,0 +1,16 @@
+[package]
+name = "fortress-arch-x86-entry"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "One-CPU real x86-64 descriptor-table installer, not integrated into FortressOS kernel"
+
+[lib]
+path = "src/lib.rs"
+
+[features]
+default = []
+
+[dependencies]
+
+[workspace]

@@ -1,0 +1,12 @@
+[package]
+name = "fortress-cap-ipc"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "Isolated no_std FortressOS capability authority and bounded IPC reference slowpath"
+
+[lib]
+path = "src/lib.rs"
+
+[features]
+default = []

@@ -1,0 +1,12 @@
+/target/
+/build/
+/kernel/target/
+/kernel/Cargo.lock
+__pycache__/
+.DS_Store
+*.swp
+*.log
+/arch/x86-entry/target/
+/arch/x86-entry/Cargo.lock
+/memory-x86/target/
+/memory-x86/Cargo.lock
