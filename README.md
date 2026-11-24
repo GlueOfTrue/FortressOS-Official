@@ -46,7 +46,7 @@ Read [SECURITY.md](SECURITY.md) and [Technical status](docs/STATUS.md) before us
 
 ## Product and release licensing
 
-Future releases distinguish the Apache-2.0 **Fortress Kernel**, its public ABI and the open baseline **Fortress Graphics** stack from the separately licensed **FortressOS** distribution. The distribution may include both open-source and proprietary components; publication of the kernel does not imply publication of all system source. Previously granted open-source rights remain unchanged. See [Licensing and release boundary](RELEASE_POLICY.md).
+Future releases distinguish the Apache-2.0 **Fortress Kernel**, its public ABI and the open baseline **Fortress Graphics** stack from the separately licensed **FortressOS** distribution. The open kernel includes its baseline hybrid-kernel modules, not merely the microkernel core. The distribution may include both open-source and proprietary components, with separately licensed enhanced and high-assurance security profiles; publication of the kernel does not imply publication of all system source. Previously granted open-source rights remain unchanged. See [Licensing and release boundary](RELEASE_POLICY.md).
 
 ## License
 
