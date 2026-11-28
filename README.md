@@ -44,6 +44,10 @@ This source snapshot is not audited for production security. Its experimental in
 
 Read [SECURITY.md](SECURITY.md) and [Technical status](docs/STATUS.md) before using the code.
 
+## Product and release licensing
+
+Future releases distinguish the Apache-2.0 **Fortress Kernel**, its public ABI and the open baseline **Fortress Graphics** stack from the separately licensed **FortressOS** distribution. The open kernel includes its baseline hybrid-kernel modules, not merely the microkernel core. The distribution may include both open-source and proprietary components, with separately licensed enhanced and high-assurance security profiles, optional specialized kernel modules where rights permit, advanced virtualization and mission-critical continuity features; publication of the kernel does not imply publication of all system source. Previously granted open-source rights remain unchanged. See [Licensing and release boundary](RELEASE_POLICY.md).
+
 ## License
 
 The intended license for first-party source in this preview is **Apache License 2.0** (see [LICENSE](LICENSE)); all release rights and required third-party notices must be verified before publication. Modified redistributed files must be clearly marked, and original attribution retained as required by the license. See [NOTICE](NOTICE.md), [Brand and official builds](TRADEMARKS.md), and [Contributing](CONTRIBUTING.md). Limine, OVMF and other external build dependencies are **not** distributed here and retain their own licenses.
